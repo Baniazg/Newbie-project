@@ -13,6 +13,9 @@ namespace Guess_the_number
             Console.WriteLine(welcome);
 
 
+
+            int count = 0;
+
             while (guess != number)
             {
                 guess = Convert.ToInt32(Console.ReadLine());
@@ -25,10 +28,9 @@ namespace Guess_the_number
                 {
                     Console.WriteLine("Too High!!!");
                 }
-
-
+                    count = count +1;
             }
-            Console.WriteLine("Great. Correct answer is " + number);
+            Console.WriteLine("Great. Correct answer is " + number + " Number of try is "+ count);
         }
     }
 }
