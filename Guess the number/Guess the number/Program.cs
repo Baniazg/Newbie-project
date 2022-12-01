@@ -11,26 +11,55 @@ namespace Guess_the_number
             string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
             int guess = 0;
             Console.WriteLine(welcome);
-
-
+            bool TryAgian = true;
+            string Answer = "";
 
             int count = 0;
-
-            while (guess != number)
+            while (TryAgian)
             {
-                guess = Convert.ToInt32(Console.ReadLine());
 
-                if (guess < number)
+
+                while (guess != number)
                 {
-                    Console.WriteLine("Too Low!!!");
+
+
+                    string input = Console.ReadLine();
+
+                    if (!int.TryParse(input, out guess))
+                    {
+
+                        Console.WriteLine("That's not a number. Write a number ");
+                        continue;
+                    }
+
+                    if (guess < number)
+                    {
+                        Console.WriteLine("Too Low!!!");
+                    }
+                    else if (guess > number)
+                    {
+                        Console.WriteLine("Too High!!!");
+                    }
+                    count = count + 1;
                 }
-                else if (guess > number)
+                Console.WriteLine("Great. Correct answer is " + number + " Number of try is " + count);
+                Console.WriteLine("Wanna try again ?[y]es or [n]o ");
+                Answer = Console.ReadLine();
+
+                if (Answer == "y")
                 {
-                    Console.WriteLine("Too High!!!");
+                    TryAgian = true;
+                    int num = rnd.Next(0, 200);
+                    number = num;
+                    Console.WriteLine(welcome);
                 }
-                    count = count +1;
+
+                else
+                    Console.WriteLine(" Thank you for a game. See you later");
+                    TryAgian = false;
             }
-            Console.WriteLine("Great. Correct answer is " + number + " Number of try is "+ count);
+           
+            
         }
     }
 }
