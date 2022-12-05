@@ -4,13 +4,18 @@ namespace Guess_the_number
 {
     class Program
     {
+        static void Greetings()
+        {string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
+
+            Console.WriteLine(welcome);
+        }
+
+
         static void MyGame()
         {
             Random rnd = new Random();
             int number = rnd.Next(0, 200);
-            string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
             int guess = 0;
-            Console.WriteLine(welcome);
             bool TryAgain = true;
             string Answer = "";
 
@@ -42,7 +47,7 @@ namespace Guess_the_number
                     {
                         Console.WriteLine("Too High!!!");
                     }
-                    count = count + 1;
+                    count += 1;
                 }
                 Console.WriteLine("Great. Correct answer is " + number + " Number of try is " + count);
                 Console.WriteLine("Wanna try again ?[y]es or [n]o ");
@@ -50,10 +55,10 @@ namespace Guess_the_number
 
                 if (Answer == "y")
                 {
+                    Console.WriteLine("Ok. As you wish. Guess the number betwen 0 and 200");
                     TryAgain = true;
                     int num = rnd.Next(0, 200);
                     number = num;
-                    Console.WriteLine(welcome);
                 }
 
                 else
@@ -67,6 +72,7 @@ namespace Guess_the_number
         }
         static void Main(string[] args)
         {
+            Greetings();
             MyGame();
         }
     }
