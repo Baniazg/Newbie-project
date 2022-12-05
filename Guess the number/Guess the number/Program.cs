@@ -4,18 +4,20 @@ namespace Guess_the_number
 {
     class Program
     {
-        static void Main(string[] args)
+        static void MyGame()
         {
             Random rnd = new Random();
             int number = rnd.Next(0, 200);
             string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
             int guess = 0;
             Console.WriteLine(welcome);
-            bool TryAgian = true;
+            bool TryAgain = true;
             string Answer = "";
 
             int count = 0;
-            while (TryAgian)
+
+
+            while (TryAgain)
             {
 
 
@@ -48,18 +50,24 @@ namespace Guess_the_number
 
                 if (Answer == "y")
                 {
-                    TryAgian = true;
+                    TryAgain = true;
                     int num = rnd.Next(0, 200);
                     number = num;
                     Console.WriteLine(welcome);
                 }
 
                 else
+                {
                     Console.WriteLine(" Thank you for a game. See you later");
-                    TryAgian = false;
+                    TryAgain = false;
+                }
             }
-           
-            
+
+
+        }
+        static void Main(string[] args)
+        {
+            MyGame();
         }
     }
 }
