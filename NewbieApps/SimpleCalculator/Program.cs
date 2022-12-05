@@ -53,13 +53,13 @@ namespace SimpleCalculator
                 Console.WriteLine("Havent this calculation yet. Try Again");
 
             }
-            
+
             Console.ReadLine();
 
         }
-        
 
 
-    } 
+
+    }
 
 }
