@@ -5,23 +5,31 @@ namespace SimpleCalculator
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        {  
             Console.WriteLine("Hello. Welcome in simple calculator.");
+            bool loop = true;
+             while (loop)
+            {
+          
 
 
             Console.WriteLine("Please, input a first number. ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            double num1 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Please, input a second number. ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            double num2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter a action symbol  : [+]Addition , [-] Subtraction, [*] Multiplication, [/] Division ");
             string symbol = Console.ReadLine();
-            int result = 0;
             
+            string tryAgain;
 
 
-            
-            
+
+                double result = 0;
+
+
+
+
+
                 if (symbol == "+")
                 {
                     result = Sum(num1, num2);
@@ -43,31 +51,42 @@ namespace SimpleCalculator
                     Console.WriteLine("Havent this calculation yet. Try Again");
                 }
 
-            Console.WriteLine(num1 + symbol + num2 + " = " + result);
-            Console.ReadLine();
+                Console.WriteLine(num1 + symbol + num2 + " = " + result);
+                Console.WriteLine("Wanna another calculation ? [Y][N]");
+                tryAgain = Console.ReadLine().ToUpper();
+                if (tryAgain=="Y")
+                {
+                    loop = true;
+                }
+                else
+                {
+                    loop = false;
+                }
+
+            }
 
                 
             
 
         }
-        static int Sum(int num1, int num2)
+        static double Sum(double num1, double num2)
         {
-            int result = num1 + num2;
+            double result = num1 + num2;
             return result;
         }
-        static int Substraction(int num1, int num2)
+        static double Substraction(double num1, double num2)
         {
-            int result = num1 - num2;
+            double result = num1 - num2;
             return result;
         }
-        static int Multiply(int num1, int num2)
+        static double Multiply(double num1, double num2)
         {
-            int result = num1 * num2;
+            double result = num1 * num2;
             return result;
         }
-        static int Divine(int num1, int num2)
+        static double Divine(double num1, double num2)
         {
-            int result = num1 / num2;
+            double result = num1 / num2;
             return result;
         }
 
