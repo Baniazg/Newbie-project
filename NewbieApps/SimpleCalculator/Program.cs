@@ -29,11 +29,6 @@ namespace SimpleCalculator
                     result = Substraction(num1, num2);
                 }
 
-                else if (symbol == "/" && num2 == 0)
-                {
-                    Console.WriteLine("Cant do this");
-                    continue;
-                }
 
                 else if (symbol == "*")
                 {
@@ -41,6 +36,11 @@ namespace SimpleCalculator
                 }
                 else if (symbol == "/")
                 {
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Cant do this");
+                        continue;
+                    }
                     result = Division(num1, num2);
                 }
 
