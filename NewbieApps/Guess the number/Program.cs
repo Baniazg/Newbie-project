@@ -5,12 +5,11 @@ namespace Guess_the_number
     class Program
     {
         static void Greetings()
-        {string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
+        {
+            string welcome = "Hello, welcome in game. Guess the number betwen 0 and 200";
 
             Console.WriteLine(welcome);
         }
-
-
         static void MyGame()
         {
             Random rnd = new Random();
@@ -18,23 +17,16 @@ namespace Guess_the_number
             int guess = 0;
             bool TryAgain = true;
             string Answer = "";
-
             int count = 0;
-
 
             while (TryAgain)
             {
-
-
                 while (guess != number)
                 {
-
-
                     string input = Console.ReadLine();
 
                     if (!int.TryParse(input, out guess))
                     {
-
                         Console.WriteLine("That's not a number. Write a number ");
                         continue;
                     }
@@ -67,8 +59,6 @@ namespace Guess_the_number
                     TryAgain = false;
                 }
             }
-
-
         }
         static void Main(string[] args)
         {

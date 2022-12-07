@@ -5,30 +5,19 @@ namespace SimpleCalculator
     class Program
     {
         static void Main(string[] args)
-        {  
+        {
             Console.WriteLine("Hello. Welcome in simple calculator.");
             bool loop = true;
-             while (loop)
+            while (loop)
             {
-          
-
-
-            Console.WriteLine("Please, input a first number. ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Please, input a second number. ");
-            double num2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter a action symbol  : [+]Addition , [-] Subtraction, [*] Multiplication, [/] Division ");
-            string symbol = Console.ReadLine();
-            
-            string tryAgain;
-
-
-
+                Console.WriteLine("Please, input a first number. ");
+                double num1 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Please, input a second number. ");
+                double num2 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Enter a action symbol  : [+]Addition , [-] Subtraction, [*] Multiplication, [/] Division ");
+                string symbol = Console.ReadLine();
+                string tryAgain;
                 double result = 0;
-
-
-
-
 
                 if (symbol == "+")
                 {
@@ -54,7 +43,7 @@ namespace SimpleCalculator
                 Console.WriteLine(num1 + symbol + num2 + " = " + result);
                 Console.WriteLine("Wanna another calculation ? [Y][N]");
                 tryAgain = Console.ReadLine().ToUpper();
-                if (tryAgain=="Y")
+                if (tryAgain == "Y")
                 {
                     loop = true;
                 }
@@ -62,12 +51,7 @@ namespace SimpleCalculator
                 {
                     loop = false;
                 }
-
             }
-
-                
-            
-
         }
         static double Sum(double num1, double num2)
         {
@@ -89,11 +73,5 @@ namespace SimpleCalculator
             double result = num1 / num2;
             return result;
         }
-
-        
-
-
-
     }
-
 }
