@@ -19,6 +19,7 @@ namespace SimpleCalculator
                 string tryAgain;
                 double result = 0;
 
+
                 if (symbol == "+")
                 {
                     result = Sum(num1, num2);
@@ -27,14 +28,22 @@ namespace SimpleCalculator
                 {
                     result = Substraction(num1, num2);
                 }
+
+                else if (symbol == "/" && num2 == 0)
+                {
+                    Console.WriteLine("Cant do this");
+                    continue;
+                }
+
                 else if (symbol == "*")
                 {
                     result = Multiply(num1, num2);
                 }
                 else if (symbol == "/")
                 {
-                    result = Divine(num1, num2);
+                    result = Division(num1, num2);
                 }
+
                 else
                 {
                     Console.WriteLine("Havent this calculation yet. Try Again");
@@ -68,7 +77,7 @@ namespace SimpleCalculator
             double result = num1 * num2;
             return result;
         }
-        static double Divine(double num1, double num2)
+        static double Division(double num1, double num2)
         {
             double result = num1 / num2;
             return result;
