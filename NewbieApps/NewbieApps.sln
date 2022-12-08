@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameGenerator", "NameGenerator\NameGenerator.csproj", "{44854722-5339-4271-A988-A45B22217D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Population", "Population\Population.csproj", "{DF789F74-D442-45AC-80EF-C9BDB1C7F28A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{44854722-5339-4271-A988-A45B22217D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44854722-5339-4271-A988-A45B22217D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44854722-5339-4271-A988-A45B22217D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF789F74-D442-45AC-80EF-C9BDB1C7F28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF789F74-D442-45AC-80EF-C9BDB1C7F28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF789F74-D442-45AC-80EF-C9BDB1C7F28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF789F74-D442-45AC-80EF-C9BDB1C7F28A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
