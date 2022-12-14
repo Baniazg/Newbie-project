@@ -16,7 +16,7 @@ namespace Population
             string[] lastName = { "Smith", "Jones", "Williams", "Diesel", "Taylor", "Davies", " Evans", "Thomas", "Johnson", "Roberts", "Wood" };
 
             Random rand = new Random();
-            string randomFirstName = firstName[rand.Next(firstName.Length)];
+       `     string randomFirstName = firstName[rand.Next(firstName.Length)];
             string randomLastName = lastName[rand.Next(lastName.Length)];
             string fullName = (randomFirstName +" "+ randomLastName);
             
