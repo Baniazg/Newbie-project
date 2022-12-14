@@ -6,19 +6,21 @@ namespace FightSymulator
     {
         static void Main(string[] args)
         {
-
+            Random rnd = new Random();
             int playerSoldierHealth = 100;
-            int playerSoldierPower = 20;
-            int playerSoldierDefense = 5;
             int enemySoldierHealth = 100;
-            int enemySoldierPower = 18;
-            int enemySoldierDefense = 3;
             int hitCounter =1;
 
             while (playerSoldierHealth > 0 && enemySoldierHealth > 0)
             {
+                int playerSoldierPower = rnd.Next(0, 20);
+                int playerSoldierDefense = rnd.Next(0, 8);
+                int enemySoldierPower = rnd.Next(0, 20);
+                int enemySoldierDefense = rnd.Next(0, 8);
+
                 playerSoldierHealth = playerSoldierHealth + playerSoldierDefense - enemySoldierPower;
                 enemySoldierHealth = enemySoldierHealth + enemySoldierDefense - playerSoldierPower;
+                    
             if (enemySoldierHealth<0)
                 {
                     enemySoldierHealth = 0;
@@ -27,25 +29,18 @@ namespace FightSymulator
                 {
                     playerSoldierHealth = 0;
                 }
-                Console.WriteLine("After " +hitCounter + " hit you have " + playerSoldierHealth + " and your enemy have " + enemySoldierHealth);
-                hitCounter += 1;
-            
+                    Console.WriteLine("After " + hitCounter + " hit you have " + playerSoldierHealth + " hit points and your enemy have " + enemySoldierHealth +" hit points");
+                    hitCounter += 1;
+
             }
-
-            if (playerSoldierHealth < 0)
-                {
-                    Console.WriteLine("You lose!!");
-                }
+            if (enemySoldierHealth == 0 )
+            {
+                Console.WriteLine("You win!!");
+            }
             else
-                {
-                    Console.WriteLine("You win!!");
-                }
-
-
-
-
-
-
+            {
+                Console.WriteLine("You lose!!");
+            }
 
         }
     }
