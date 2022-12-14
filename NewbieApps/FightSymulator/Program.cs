@@ -15,12 +15,21 @@ namespace FightSymulator
             {
                 int playerSoldierPower = rnd.Next(0, 20);
                 int playerSoldierDefense = rnd.Next(0, 8);
+                int playerSoldierSpeed = rnd.Next(0, 10);
                 int enemySoldierPower = rnd.Next(0, 20);
                 int enemySoldierDefense = rnd.Next(0, 8);
+                int enemySoldierSpeed = rnd.Next(0, 10);
 
-                playerSoldierHealth = playerSoldierHealth + playerSoldierDefense - enemySoldierPower;
-                enemySoldierHealth = enemySoldierHealth + enemySoldierDefense - playerSoldierPower;
-                    
+            if (playerSoldierSpeed > enemySoldierSpeed)
+                {
+                    playerSoldierHealth = playerSoldierHealth;
+                    enemySoldierHealth = enemySoldierHealth + enemySoldierDefense - playerSoldierPower;
+                }
+            else
+                {
+                    playerSoldierHealth = playerSoldierHealth + playerSoldierDefense - enemySoldierPower;
+                    enemySoldierHealth = enemySoldierHealth;
+                }
             if (enemySoldierHealth<0)
                 {
                     enemySoldierHealth = 0;
